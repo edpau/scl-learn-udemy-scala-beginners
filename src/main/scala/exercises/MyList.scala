@@ -195,4 +195,11 @@ object ListTest extends App {
   )
 
   println(listOfIntegers.fold(0)(_+_))
+
+  // test MyList supports for comprehensions?
+  val combination = for {
+    n <- listOfIntegers
+    string <- listOfStrings
+  } yield n + "-" + string
+  println(combination)
 }
